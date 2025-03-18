@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affixes Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="container text-center c-home">
+        <div class="home-layout" id="home">
+            <picture>
+                <source srcset="img/logo.png" width="400" height="250" media="(max-width: 600px)">
+                <source srcset="img/logo.png" width="500" height="300" media="(max-width: 1500px)">
+                <source srcset="img/logo.png">
+                <img src="img/logo.png" alt="Flowers">
+            </picture>
+            <h1 class="pb-4">best score:</h1>
+            <a href="">
+                <button class="btn-play" id="btnplay" onclick="showTutorial()">
+                    <img src="img/play-button.png" alt="" srcset="">
+                </button>
+            </a>
+        </div>
+        <div class="tutorial hide" id="tutorial">
+            <div class="tutorial-layout">
+                <div class="text-tutorial">
+                    <h2>Before you play</h2>
+                    <h2>Let's watch this video first</h2>
+                </div>
+                <div class="video-layout">
+                    <video id="video" controls data-setup='{"fluid": true}' width="100%" height="auto">
+                        <source src="video/tutorial.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="btn-group">
+                    <button href="/" class="btn-arrow exit-btn" id="exitbtn">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                    <a href="play.html" class="continue">
+                        <button class="btn-arrow continue-btn">
+                            <i class="fa fa-angle-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('btnplay').addEventListener('click', (e)=>{
+            document.getElementById('tutorial').classList.add("active");
+            document.getElementById('home').classList.add("active");
+            document.getElementById('tutorial').classList.remove("hide");
+            console.log("work");
+            e.preventDefault();
+        })
+        document.getElementById('exitbtn').addEventListener('click', (e)=>{
+            document.getElementById('tutorial').classList.remove("active");
+            document.getElementById('tutorial').classList.add("hide");
+        });
+    </script>
+</body>
+</html>

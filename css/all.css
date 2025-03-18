@@ -1,0 +1,339 @@
+body{
+    background: #D0C548;
+}
+
+.con-menu{
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+    transition-delay: 0s;
+    opacity: 0;
+}
+.con-menu.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: .3s ease;
+    transition-delay: 1s;
+}
+.con-menu > .topnavbar{
+    height: 50px;
+    position: relative;
+    padding: 15px 10px;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+
+}
+.con-menu > .topnavbar a{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 25px;
+}
+.con-menu > .topnavbar a > i{
+    padding: 25% 25%;
+}
+.con-menu > .topnavbar .title{
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:600;
+    font-style: normal;
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px 25vw;    
+    color: #fff;
+}
+.circle-btn-hdn{
+    display: none;
+    opacity: 0;
+}
+.white{
+    background: #fff;
+}
+.green{
+    background: green;
+}
+.q-bar-all{
+    width: 100%;
+    height: 20px;
+    display: grid;
+    padding-right: 5px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    gap: 1px;
+}
+.q-bar{
+    width: auto;
+    height: 20px;
+    border-radius: 5px;
+}
+.q-num-container{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.q-num-container > span{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14pt;
+    color: #fff;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+}
+.q-contain{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.q-text{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    font-style: normal;
+}
+.option-choose{
+    margin-bottom: 10px;
+}
+.q-desc, .q-hint,  .option-choose{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    font-style: normal;
+}
+.option-contain{
+    display: flex;
+    flex-direction: column;
+}
+.option-list{
+    display: grid;
+    grid-template: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.option-list > .option{
+    width: 174px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-list > .option.correct, .option-list > .option.correct{
+    background: green;
+    border-color: green;
+    color: #000;
+}
+.option-list > .option.incorrect, .option-list > .option.incorrect{
+    background: rgb(233, 10, 10);
+    border-color: rgb(233, 10, 10);
+    color: #000;
+}
+.option-list > .option:hover, .option-list > .option:hover > span{
+    border-color: #000;
+}
+.option-list .option.disabled{
+    pointer-events: none;
+}
+.option-a{
+    grid-area: 1/1/3/3;
+}
+.option-b{
+    grid-area: 1/2/2/3;
+}
+.option-c{
+    grid-area: 2/1/3/2;
+}
+.option-d{
+    grid-area: 2/2/3/3;
+}
+.option{
+    display: inline-block;
+    text-align: center;
+}
+.option > span{
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    font-style: normal;
+    white-space: wrap;
+}
+.q-footer{
+    padding: 30px 0;
+    display: flex;
+    justify-content: end;
+}
+.q-footer > button{
+    width: 160px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+.q-footer > button:hover{
+    background: #fff;
+    color: #000;
+}
+
+.result{
+    background: #4873D0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    display: none;
+}
+.result.active{
+    opacity: 1;
+    display: block;
+}
+.result-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+@media screen and (max-width: 450px) {
+    .result-layout .game-over{
+        margin-top: 20vh;
+    }    
+}
+
+.replay-layout{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.replay-layout button{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    margin-right: 30px;
+}
+.material-symbols-outlined{
+    font-size: 50pt;
+}
+.replay-layout h3{
+    font-size: 18pt;
+    color: #000;
+    font-family: "Irish Grover", sans-serif;
+}
+
+.score-layout{
+    position: relative;
+}
+.score-layout span{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 10%;
+    left: 35%;
+    font-size: 25pt;
+    color: #000;
+    font-family: "Irish Grover", sans-serif;
+}
+
+.score-layout :nth-of-type(2){
+    margin-top: 40px;
+    left: 42%;
+}
+
+@media only screen and (min-width: 450px) {
+    .con-menu{
+        overflow: hidden;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .3s ease;
+        transition-delay: 0s;
+        opacity: 0;
+        margin: 0 15%;
+    }
+    .q-contain{
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .q-contain img{
+        margin-bottom: -10px;
+    }
+    .q-desc{
+        inline-size: 300px;
+        overflow-wrap: break-word;
+    }
+    .q-text{
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        font-style: normal;
+    }
+    .option-list > .option{
+        width: 130px !important;
+        height: 40px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        background: #fff;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .option > span{
+        color: #000;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        font-style: normal;
+        white-space: wrap;
+    }
+    .q-footer{
+        padding: 30px 0;
+        display: flex;
+        justify-content: end;
+    }
+    .q-footer > button{
+        width: 120px;
+        height: 30px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        background: transparent;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        transition: .3s;
+    }
+}

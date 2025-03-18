@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affixes Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=play_arrow" />
+    <script src="js/question.js"></script>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="con-menu active" id="questionall">
+        <div class="topnavbar">
+            <a href="./" class="circle-btn">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <span class="title"></span>
+            <a href="" class="circle-btn-hdn">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div>
+            <div class="q-num-container">
+                <div>
+                    <span>0</span>
+                    <span class="number"></span>
+                    <span> Question</span>
+                </div>
+                <div>
+                    <span class="numbercounts"></span>
+                    <span> of 10</span>
+                    <span class="score" style="display: none;"></span>
+                </div>
+            </div>
+            <div class="q-bar-all">
+                <div class="q-bar white n1"></div>
+                <div class="q-bar white n2"></div>
+                <div class="q-bar white n3"></div>
+                <div class="q-bar white n4"></div>
+                <div class="q-bar white n5"></div>
+                <div class="q-bar white n6"></div>
+                <div class="q-bar white n7"></div>
+                <div class="q-bar white n8"></div>
+                <div class="q-bar white n9"></div>
+                <div class="q-bar white n10"></div>
+            </div>
+            <div class="q-contain">
+                <img class="img-icon" width="150" height="auto" alt="" srcset="">
+                <span class="q-desc"></span>
+                <span class="q-text"></span>
+                <span class="q-hint">(hint: wrong)</span>
+            </div>
+            <div class="option-contain">
+                <span class="option-choose">choose your answer</span>
+                <div class="option-list" id="optionlist">
+                    
+                </div>
+            </div>
+            <div class="q-footer">
+                <button class="next-btn" id="nextbtn">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="result" id="result">
+        <div class="result-layout">
+            <picture class="game-over">
+                <source srcset="img/game-over.png" width="200" height="150" media="(max-width: 500px)">
+                <source srcset="img/game-over.png" width="400" height="200" media="(max-width: 1500px)">
+                <source srcset="img/game-over.png">
+                <img src="img/game-over.png" alt="">
+            </picture>
+            <div class="replay-layout">
+                <button class="replay" onclick="window.location.reload()">
+                    <span class="material-symbols-outlined">
+                        play_arrow
+                    </span>
+                </button>
+                <h3>replay</h3>
+            </div>
+            <div class="score-layout">
+                <img src="img/score-bg.png" alt="" width="350" height="auto">
+                <span class="title-score">Score :</span><br>
+                <span class="final-score"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
