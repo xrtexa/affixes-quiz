@@ -78,7 +78,7 @@ let questionprefixsuffix = [
         numb: 6,
         question: "Help",
         answers: "B. -ful",
-        hint:"(hint: remember the suffix rules!)",
+        hint:"(hint: helping others)",
         description:"",
         image:"img/learn2.png",
         options : [

@@ -8,6 +8,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
 }
 .home-layout.tutorial.active{
     filter: blur(15px);
