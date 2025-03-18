@@ -1,5 +1,6 @@
 html, body {
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     position: relative;
     background: #4873D0;
 }
